@@ -1,0 +1,10 @@
+.DiscountButton {
+    min-width: 64px;
+    min-height: 64px;
+    margin: 5px;
+}
+.CancelButton {
+    width: 286px;
+    min-height: 64px;
+    margin: 5px;
+}
