@@ -13,6 +13,7 @@ export default function DiscountPicker(props) {
             if (activeTags[it]) {
                 sum += props.discounts[it]
             }
+            return 0;
         })
         setDiscount(sum)
     }
@@ -26,6 +27,7 @@ export default function DiscountPicker(props) {
                 <Button className="DiscountButton" onClick={() => setBaseCost(baseCost + 10)}>+10</Button>
                 <Button variant="danger" className="DiscountButton" onClick={() => setBaseCost(0)}>Reset</Button>
             </div>
+            <br/>
             <p>Base cost: {baseCost}</p>
             <p>Discount: {discount}</p>
             <p>Final cost: {Math.max(baseCost - discount, 0)} </p>

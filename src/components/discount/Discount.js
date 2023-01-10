@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import DiscountPicker from "./discount-picker/DiscountPicker";
 import TagPicker from "./tag-picker/TagPicker";
+import "./Styles.css"
 
 export default function Discount() {
 
@@ -22,8 +23,7 @@ export default function Discount() {
 
     const [showWindow, setShowWindow] = useState(false)
 
-
-    const [tags, setTags] = useState(["animal", "building", "city", "earth", "event", "jovian", "microbe","plant", "power", "science", "space", "money"])
+    const tags = ["animal", "building", "city", "earth", "event", "jovian", "microbe","plant", "power", "science", "space", "money"]
 
     function updateDiscount(tag, inc) {
         var current = discounts
@@ -36,9 +36,9 @@ export default function Discount() {
     return(
         <div>
             <h1>Discount tracker</h1>
-            {!showWindow && <Button onClick={() => setShowWindow(!showWindow)}>New discount</Button>}
             {showWindow && <TagPicker tags={tags} showWindow={setShowWindow} updateDiscount={updateDiscount}/>}
             {!showWindow && <DiscountPicker tags={tags} discounts={discounts}/>}
+            {!showWindow && <Button className="NewDiscount" onClick={() => setShowWindow(!showWindow)}>New discount</Button>}
         </div>
     )
 }

@@ -1,0 +1,9 @@
+.NewDiscount {
+    height: 55px;
+    bottom: 0%;
+    opacity: 1;
+    position: fixed;
+    width: 50%;
+    margin-left: -25%;
+    margin-bottom: 5vh;
+}
