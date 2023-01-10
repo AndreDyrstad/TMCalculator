@@ -1,0 +1,16 @@
+@media only screen and (min-width: 630px) {
+    .TagContainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+        width: 50%;
+        padding: 10px;
+    }
+  }
+
+
+.TagContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+}
